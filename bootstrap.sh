@@ -16,5 +16,8 @@ apt-get install -y linux-image-extra-$(uname -r)
 apt-get install -y docker-engine
 apt-get install -y git
 
+# Create docker group and add user(s) to it
+usermod -aG docker vagrant
+
 # Start services
 #service docker start
