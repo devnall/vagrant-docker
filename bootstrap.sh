@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Get rid of "not tty" noise on vagrant up
+sed -i "/mesg n/d" /root/.profile
+
 # Add key for docker apt repo
 apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 
